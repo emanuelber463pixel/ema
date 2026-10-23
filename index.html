@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto 1° Ano</title>
+    <title>Player 1 Blog</title>
     <style>
         /* Configurações Globais */
         * {
@@ -15,30 +15,35 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f1f5f9;
-            color: #334155;
+            background-color: #0b0f19; /* Fundo escuro estilo interface de console/Steam */
+            color: #f1f5f9;
             padding: 0 0 40px 0;
         }
 
         /* Topo do Blog */
         header {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, #090d16, #1e1b4b);
             color: #ffffff;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #10b981; /* Linha verde neon (estilo Razer/Xbox) */
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
-            font-weight: 700;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            color: #94a3b8;
         }
 
         /* Container Principal */
@@ -51,17 +56,18 @@
         /* Cartões de Post (Articles) */
         article {
             display: flex;
-            background-color: #ffffff;
+            background-color: #111827; /* Fundo dos cards */
+            border: 1px solid #1f2937;
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 30px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
 
         article:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #10b981; /* Borda acende ao passar o mouse */
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
         }
 
         /* Imagens dos Posts */
@@ -81,21 +87,21 @@
         }
 
         .artigo-conteudo h2 {
-            font-size: 1.5rem;
-            color: #1e293b;
+            font-size: 1.6rem;
+            color: #ffffff;
             margin-bottom: 8px;
         }
 
         .artigo-autor {
             font-size: 0.9rem;
-            color: #64748b;
+            color: #10b981; /* Cor verde de destaque */
             font-weight: 600;
             margin-bottom: 12px;
         }
 
         .artigo-conteudo p:not(.artigo-autor) {
             font-size: 1rem;
-            color: #475569;
+            color: #9ca3af;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -110,36 +116,35 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background-color: #1f2937;
+            border: 1px solid #374151;
             padding: 8px 16px;
             border-radius: 30px;
             cursor: pointer;
             font-weight: 600;
-            color: #64748b;
+            color: #9ca3af;
             transition: all 0.2s ease;
         }
 
         button:hover {
-            background-color: #f1f5f9;
-            border-color: #cbd5e1;
-            color: #334155;
+            background-color: #374151;
+            color: #ffffff;
         }
 
         /* Estados ativos para cliques via JS */
         button.love-ativo {
-            background-color: #ffe4e6;
-            border-color: #fda4af;
-            color: #e11d48;
+            background-color: #991b1b;
+            border-color: #ef4444;
+            color: #ffffff;
         }
 
         button.like-ativo {
-            background-color: #dbeafe;
-            border-color: #93c5fd;
-            color: #2563eb;
+            background-color: #1e40af;
+            border-color: #3b82f6;
+            color: #ffffff;
         }
 
-        /* Adaptação para Celulares (Responsividade) */
+        /* Adaptação para Celulares */
         @media (max-width: 600px) {
             article {
                 flex-direction: column;
@@ -149,7 +154,7 @@
                 height: 200px;
             }
             header h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -157,18 +162,18 @@
 
 <body>
     <header>
-        <h1>Meu blog sobre o 1° Ano</h1>
-        <p>Vou compartilhar conhecimentos sobre meus alunos</p>
+        <h1>Player 1 Blog</h1>
+        <p>Análises de jogos, gameplays e o que estou jogando no momento</p>
     </header>
     
     <main>
         <!-- Primeiro Post -->
         <article>
-            <img class="artigo-imagem" src="https://tribunadointerior.com.br" alt="Estudantes em Peabiru">
+            <img class="artigo-imagem" src="https://tribunadointerior.com.br" alt="Captura de tela de jogo de aventura">
             <div class="artigo-conteudo">
-                <h2>Novidades da Turma</h2>
+                <h2>A Magia dos Jogos de Mundo Aberto</h2>
                 <p class="artigo-autor">Por: Marcelo Paludetto</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar a evolução dos alunos do 1° Ano, nossas atividades lúdicas e os primeiros passos deles no mundo da tecnologia.</p>
+                <p>Não há nada melhor do que ligar o videogame ou o PC após um dia longo e explorar um mapa gigante cheio de segredos. Hoje comento sobre a sensação de liberdade que jogos de mundo aberto nos trazem e quais são os meus favoritos da atualidade.</p>
                 <div class="botoes-container">
                     <button class="btn-love">❤️ <span>0</span></button>
                     <button class="btn-like">👍 <span>0</span></button>
@@ -178,11 +183,11 @@
 
         <!-- Segundo Post -->
         <article>
-            <img class="artigo-imagem" src="imagem-blog.png" alt="Logotipo de tecnologia e educação">
+            <img class="artigo-imagem" src="imagem-blog.png" alt="Logotipo conceitual de IA e jogos">
             <div class="artigo-conteudo">
-                <h2>Tecnologia na Alfabetização</h2>
+                <h2>A Evolução da IA nos Games Atuais</h2>
                 <p class="artigo-autor">Por: Marcelo Paludetto</p>
-                <p>Como usar ferramentas digitais e lógica de programação para ajudar no desenvolvimento de crianças do 1° Ano? No post de hoje trago dicas práticas de ferramentas que usei em sala.</p>
+                <p>Você já reparou como os inimigos e companheiros controlados pelo computador estão agindo de forma muito mais realista? No post de hoje, exploro como a inteligência artificial está deixando as partidas casuais e competitivas muito mais desafiadoras e divertidas.</p>
                 <div class="botoes-container">
                     <button class="btn-love">❤️ <span>0</span></button>
                     <button class="btn-like">👍 <span>0</span></button>
@@ -192,7 +197,7 @@
     </main>
 
     <script>
-        // Lógica para os botões de coração (Love)
+        // Lógica dos botões de coração (Love)
         const botoesLove = document.querySelectorAll(".btn-love");
         botoesLove.forEach(function (botao) {
             let ativo = false;
@@ -210,7 +215,7 @@
             });
         });
 
-        // Lógica para os botões de joinha (Like)
+        // Lógica dos botões de joinha (Like)
         const botoesLike = document.querySelectorAll(".btn-like");
         botoesLike.forEach(function (botao) {
             let ativo = false;
@@ -231,3 +236,4 @@
 </body>
 
 </html>
+
